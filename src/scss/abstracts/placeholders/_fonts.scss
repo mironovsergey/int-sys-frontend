@@ -1,0 +1,19 @@
+%golos-text {
+  font-family: 'Golos Text', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.015em;
+}
+
+%roboto-flex {
+  font-family: 'Roboto Flex', sans-serif;
+  font-optical-sizing: none;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: 'slnt' 0, 'wdth' 120, 'GRAD' 50, 'XOPQ' 140,
+    'XTRA' 468, 'YOPQ' 63, 'YTAS' 750, 'YTDE' -203, 'YTFI' 738, 'YTLC' 570,
+    'YTUC' 750;
+  font-variant-numeric: lining-nums proportional-nums;
+  letter-spacing: -0.002em;
+}

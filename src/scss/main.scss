@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@import 'bootstrap/scss/functions';
+@import './abstracts/functions';
+
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+@import './abstracts/variables';
+
+@import 'include-media/dist/include-media';
+
+@import 'bootstrap/scss/mixins';
+@import './abstracts/mixins';
+
+@import './vendors/normalize';
+@import './vendors/bootstrap';
+@import './vendors/swiper';
+
+@import './abstracts/placeholders';
+
+@import './components/root';
+@import './components/global';
+@import './components/buttons';
+@import './components/forms';
+@import './components/typography';
+@import './components/nav';
+@import './components/section';
+@import './components/modal';
+@import './components/slider';
+
+@import './components/blocks/header';
+@import './components/blocks/footer';
+@import './components/blocks/offcanvas';
+@import './components/blocks/breadcrumb';
+
+@import './components/sections/hero';
+@import './components/sections/intro';
+@import './components/sections/features';
+@import './components/sections/services';
+@import './components/sections/clients';
+@import './components/sections/partners';
+@import './components/sections/vacancies';
+@import './components/sections/feedback';
+@import './components/sections/project';
+@import './components/sections/text-content';

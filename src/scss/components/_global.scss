@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @extend %golos-text;
+  font-size: rem(16px);
+  line-height: 1.5;
+  text-align: left;
+  color: var(--neutral-800);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.desktop-only {
+  @include media('<xl') {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @include media('>=xl') {
+    display: none;
+  }
+}

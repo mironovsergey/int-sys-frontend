@@ -1,0 +1,28 @@
+.clients-list {
+  --bs-gutter-x: #{rem(20px)};
+  row-gap: rem(20px);
+}
+
+.client-card {
+  &__outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__logo {
+    @include img-lazy(100%);
+    border-radius: rem(8px);
+  }
+}

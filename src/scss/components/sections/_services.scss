@@ -1,0 +1,60 @@
+.services-list {
+  row-gap: rem(40px);
+}
+
+.services-slider {
+  padding: 0 calc(50vw - 50%);
+  margin: 0 calc(50% - 50vw);
+
+  .swiper-slide {
+    width: rem(240px);
+    margin-right: rem(20px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include media('>=md') {
+    .swiper-slide {
+      width: rem(272px);
+      margin-right: rem(40px);
+    }
+  }
+}
+
+.service-card {
+  height: 100%;
+
+  &__outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    padding-top: rem(20px);
+    padding-right: rem(20px);
+    padding-bottom: rem(20px);
+  }
+
+  &__image {
+    @include img-lazy(#{percentage(2/3)});
+    border-radius: rem(16px);
+  }
+
+  &__name {
+    @extend %headings;
+    font-size: rem(20px);
+    color: var(--black);
+  }
+
+  &__link {
+    color: inherit;
+
+    &::before {
+      content: '';
+      @include overlay;
+    }
+  }
+}

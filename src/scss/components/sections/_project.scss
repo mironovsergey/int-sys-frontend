@@ -1,0 +1,10 @@
+.project {
+  &__image {
+    @include img-lazy(50%);
+    border-radius: rem(10px);
+  }
+
+  &__body {
+    padding: rem(24px) rem(20px) rem(20px);
+  }
+}

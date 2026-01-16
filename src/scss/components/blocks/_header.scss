@@ -1,0 +1,70 @@
+.header {
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: box-shadow 0.15s;
+
+  &.is-scrolled {
+    box-shadow: 0 2px 8px 0 var(--neutral-200);
+  }
+
+  @include media('>=xl') {
+    [data-toggle='offcanvas'] {
+      display: none;
+    }
+  }
+}
+
+.header-outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+}
+
+.header-nav {
+  .nav-link {
+    font-size: rem(16px);
+    color: var(--black);
+    padding: rem(16px);
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-500);
+    }
+  }
+
+  @include media('<xl') {
+    display: none;
+  }
+}
+
+.header-contacts {
+  &__list {
+    @include list-unstyled;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-size: rem(16px);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    column-gap: rem(8px);
+    padding: rem(16px) 0;
+    transition: color 0.15s;
+
+    svg {
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--brand-500);
+    }
+  }
+
+  @include media('<xl') {
+    display: none;
+  }
+}

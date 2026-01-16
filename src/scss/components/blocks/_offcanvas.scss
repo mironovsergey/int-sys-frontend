@@ -1,0 +1,84 @@
+.offcanvas {
+  background-color: var(--neutral-200);
+  background-clip: padding-box;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.offcanvas-outer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.offcanvas-head,
+.offcanvas-body,
+.offcanvas-foot {
+  padding-right: calc(var(--container-gutter) * 0.5);
+  padding-left: calc(var(--container-gutter) * 0.5);
+}
+
+.offcanvas-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: rem(88px);
+}
+
+.offcanvas-body {
+  flex: 1 0 auto;
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+}
+
+.offcanvas-foot {
+  padding-top: rem(40px);
+  padding-bottom: rem(40px);
+}
+
+.offcanvas-nav {
+  flex-direction: column;
+
+  .nav-link {
+    @extend %roboto-flex;
+    font-size: rem(20px);
+    line-height: 1.2;
+    color: var(--black);
+    padding: rem(16px);
+
+    &.active {
+      color: var(--brand-500);
+    }
+  }
+}
+
+.offcanvas-contacts {
+  &__list {
+    @include list-unstyled;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    font-size: rem(16px);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    column-gap: rem(8px);
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}

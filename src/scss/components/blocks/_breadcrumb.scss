@@ -1,0 +1,29 @@
+.breadcrumb {
+  @include list-unstyled;
+  font-size: rem(14px);
+  line-height: 1.6;
+  color: var(--neutral-800);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(20px);
+
+  &-item {
+    padding: rem(4px) 0;
+
+    &:not(.active)::after {
+      content: '/';
+      margin-left: 0.5em;
+      margin-right: 0.5em;
+    }
+  }
+
+  &-link {
+    @extend %link;
+    color: inherit;
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-700);
+    }
+  }
+}

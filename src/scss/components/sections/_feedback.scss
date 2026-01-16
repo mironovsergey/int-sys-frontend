@@ -1,0 +1,21 @@
+.feedback {
+  background-color: var(--neutral-400);
+  padding-top: rem(32px);
+  padding-bottom: rem(32px);
+  padding-left: calc(0.5 * var(--container-gutter));
+  padding-right: calc(0.5 * var(--container-gutter));
+  margin-left: calc(-0.5 * var(--container-gutter));
+  margin-right: calc(-0.5 * var(--container-gutter));
+
+  .btn {
+    width: 100%;
+  }
+
+  @include media('>=md') {
+    border-radius: rem(16px);
+    padding-left: rem(32px);
+    padding-right: rem(32px);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

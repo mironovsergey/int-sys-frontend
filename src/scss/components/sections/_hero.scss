@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: calc(var(--header-height) * -1);
+  margin-bottom: 0 !important;
+
+  &__outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__inner {
+    padding-top: rem(24px);
+  }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__front {
+    min-height: 100svh;
+    padding-top: var(--header-height);
+  }
+
+  &__gallery {
+    width: 100%;
+    height: 100%;
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__overline {
+    color: var(--brand-500);
+  }
+
+  @include media('>=md') {
+    &__inner {
+      max-width: percentage(2/3);
+      padding-top: rem(40px);
+    }
+  }
+}

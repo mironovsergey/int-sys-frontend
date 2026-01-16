@@ -1,0 +1,26 @@
+.intro {
+  background-color: var(--neutral-200);
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024' height='45' fill='%23FAF9F8'%3E%3Cpath d='M512 0c193.58 0 371.534 16.834 512 45H0C140.466 16.834 318.42 0 512 0z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    aspect-ratio: 1024 / 45;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 1px);
+    transform-origin: bottom center;
+    transform: scaleY(var(--viewport-visibility, 0)) scaleX(1);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40px);
+  }
+}

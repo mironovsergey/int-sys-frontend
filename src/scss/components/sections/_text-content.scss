@@ -1,0 +1,63 @@
+.text-content {
+  max-width: rem(820px);
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  figure {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  figcaption {
+  }
+
+  a {
+    @extend %link;
+    color: var(--brand-500);
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-700);
+    }
+  }
+
+  ul {
+    @extend %ul;
+  }
+
+  ol {
+    @extend %ol;
+  }
+
+  dl {
+    > :first-child {
+      margin-top: 0;
+    }
+  }
+
+  dt {
+    @extend %headings;
+    font-size: rem(20px);
+    color: var(--black);
+    margin-top: 1.75em;
+  }
+
+  dd {
+    font-size: rem(16px);
+    color: var(--black);
+    margin: 0.9375em 0 0;
+  }
+}

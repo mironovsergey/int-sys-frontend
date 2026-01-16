@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% include "blocks/head.html" %}
+
+<body>
+  <div class="root">
+    {% include "blocks/header.html" %}
+
+    <div class="content">
+      <section class="section">
+        <div class="container">
+          {% include "blocks/breadcrumb.html" %}
+          <h1 class="section-title">Контакты</h1>
+          <div class="section-row row">
+            <div class="col-12 col-md-6">
+              <div class="feedback">
+                <form action="/data/api/success.json" method="post" class="form" novalidate="novalidate"
+                  autocomplete="off">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="form-title">Задать вопрос</h2>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="city" class="form-label">Ваш город*</label>
+                        <input type="text" name="city" id="city" class="form-control" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="form-label">E-mail*</label>
+                        <input type="email" name="email" id="email" class="form-control" required />
+                      </div>
+                      <div class="form-group">
+                        <label for="subject" class="form-label">Тема сообщения</label>
+                        <input type="text" name="subject" id="subject" class="form-control" />
+                      </div>
+                      <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea name="message" id="message" class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" name="privacy" id="privacy" class="form-check-input" required />
+                          <label for="privacy" class="form-check-label">
+                            <span class="form-check-icon">
+                              {% include "icons/check.svg" %}
+                            </span>
+                            <span class="form-check-text">
+                              Я ознакомлен с <a href="#" target="_blank">политикой обработки персональных данных</a>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" name="privacy_agree" id="privacy_agree" class="form-check-input"
+                            required />
+                          <label for="privacy_agree" class="form-check-label">
+                            <span class="form-check-icon">
+                              {% include "icons/check.svg" %}
+                            </span>
+                            <span class="form-check-text">
+                              Я даю свое <a href="#" target="_blank">согласие на обработку персональных данных</a>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Отправить</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="text-content">
+                <dl>
+                  <dt>Адрес</dt>
+                  <dd>394006, г. Воронеж, ул. Челюскинцев, д. 145</dd>
+                  <dt>Телефон</dt>
+                  <dd><a href="tel:+74732502001">+7 (473) 250-20-01</a></dd>
+                  <dt>Служба технической поддержки</dt>
+                  <dd><a href="tel:+74732502002">+7 (473) 250-20-02</a></dd>
+                  <dt>E-mail</dt>
+                  <dd><a href="mailto:inbox@int-sys.ru">inbox@int-sys.ru</a></dd>
+                  <dt>ИНН/КПП</dt>
+                  <dd>3664073241/366401001</dd>
+                  <dt>ОГРН</dt>
+                  <dd>1063667242473</dd>
+                  <dt>ОКВЭД</dt>
+                  <dd>62.02.4</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {% include "blocks/footer.html" %}
+  </div>
+
+  {% include "blocks/offcanvas.html" %}
+  {% include "blocks/script.html" %}
+
+</body>
+
+</html>

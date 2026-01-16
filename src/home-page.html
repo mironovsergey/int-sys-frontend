@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% include "blocks/head.html" %}
+
+<body>
+  <div class="root">
+    {% include "blocks/header.html" %}
+
+    <div class="content">
+      {% include "sections/hero.html" %}
+      {% include "sections/intro.html" %}
+      {% include "sections/services.html" %}
+      {% include "sections/clients.html" %}
+      {% include "sections/partners.html" %}
+    </div>
+
+    {% include "blocks/footer.html" %}
+  </div>
+
+  {% include "blocks/offcanvas.html" %}
+  {% include "blocks/script.html" %}
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+@function rem($val, $root-font-size: 16px) {
+  @if unit($val) == 'rem' {
+    @return $val;
+  } @else if unit($val) == 'px' {
+    @return ($val / $root-font-size) * 1rem;
+  } @else if unit($val) == '' {
+    @return $val * 1rem;
+  } @else {
+    @return $val;
+  }
+}
+
+@function fluid-clamp($from, $to, $vw-from, $vw-to) {
+  @if unit($vw-from) != 'px' or unit($vw-to) != 'px' {
+    @error 'Viewport values must be in px (e.g. 1024px, 1600px)';
+  }
+
+  $vw-diff: ($vw-to - $vw-from) / 1px;
+
+  @if $vw-diff == 0 {
+    @error 'Viewport min and max cannot be equal';
+  }
+
+  $preferred: 'calc(#{$from} + (#{$to} - #{$from}) * ((100vw - #{$vw-from}) / #{$vw-diff}px))';
+
+  @return unquote('clamp(#{$from}, #{$preferred}, #{$to})');
+}

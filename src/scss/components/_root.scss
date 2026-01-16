@@ -1,0 +1,16 @@
+:root {
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  --base-font-size: 16px;
+  --header-height: #{rem(88px)};
+  --container-gutter: #{$container-padding-x};
+}
+
+@include media('>=xl') {
+  :root {
+    --base-font-size: #{fluid-clamp(16px, 18px, $vw-min, $vw-max)};
+    --header-height: #{rem(96px)};
+  }
+}

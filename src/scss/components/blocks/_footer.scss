@@ -1,0 +1,115 @@
+.footer {
+  background-color: var(--brand-500);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(48px);
+  padding-top: rem(48px);
+  padding-bottom: rem(48px);
+  margin-top: rem(40px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1024' height='45' fill='%23D24A43'%3E%3Cpath d='M512 0c193.58 0 371.534 16.834 512 45H0C140.466 16.834 318.42 0 512 0z'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    aspect-ratio: 1024 / 45;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 1px);
+    transform-origin: bottom center;
+    transform: scaleY(var(--viewport-visibility, 0)) scaleX(1);
+  }
+}
+
+.footer-upper {
+  .row {
+    row-gap: rem(40px);
+  }
+}
+
+.footer-lower {
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(48px);
+  }
+
+  .row {
+    row-gap: rem(16px);
+  }
+
+  @include media('>=md') {
+    .container {
+      row-gap: rem(24px);
+    }
+  }
+}
+
+.footer-contacts {
+  &__title {
+    font-size: rem(18px);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--white);
+    margin-bottom: rem(12px);
+  }
+
+  &__list {
+    @include list-unstyled;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @extend %roboto-flex;
+    font-size: rem(20px);
+    line-height: 1.2;
+    color: var(--white);
+    display: inline-block;
+    padding: rem(8px) 0;
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-200);
+    }
+  }
+}
+
+.footer-nav {
+  column-gap: rem(40px);
+  row-gap: rem(16px);
+
+  .nav-link {
+    @extend %link;
+    color: var(--white);
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-200);
+    }
+  }
+}
+
+.copyright {
+  font-size: rem(16px);
+  font-weight: 500;
+  color: var(--white);
+}
+
+.developer {
+  font-size: rem(16px);
+  color: var(--white);
+
+  a {
+    @extend %link;
+    color: var(--white);
+    transition: color 0.15s;
+
+    &:hover {
+      color: var(--brand-200);
+    }
+  }
+}

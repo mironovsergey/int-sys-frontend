@@ -1,0 +1,69 @@
+$black: #000;
+$white: #fff;
+$brand-50: #fbedec;
+$brand-100: #f1c7c5;
+$brand-200: #eaaca9;
+$brand-300: #e18681;
+$brand-400: #db6e69;
+$brand-500: #d24a43;
+$brand-600: #bf433d;
+$brand-700: #953530;
+$brand-800: #742925;
+$brand-900: #581f1c;
+$neutral-200: #faf9f8;
+$neutral-400: #f7f6f4;
+$neutral-500: #e8e6e1;
+$neutral-800: #585857;
+$neutral-900: #303030;
+
+$colors: (
+  'black': $black,
+  'white': $white,
+  'brand-50': $brand-50,
+  'brand-100': $brand-100,
+  'brand-200': $brand-200,
+  'brand-300': $brand-300,
+  'brand-400': $brand-400,
+  'brand-500': $brand-500,
+  'brand-600': $brand-600,
+  'brand-700': $brand-700,
+  'brand-800': $brand-800,
+  'brand-900': $brand-900,
+  'neutral-200': $neutral-200,
+  'neutral-400': $neutral-400,
+  'neutral-500': $neutral-500,
+  'neutral-800': $neutral-800,
+  'neutral-900': $neutral-900,
+);
+
+$vw-min: 1024px;
+$vw-max: 1600px;
+
+// bootstrap
+$grid-breakpoints: (
+  xs: 0,
+  md: 768px,
+  xl: 1024px,
+);
+
+$container-max-widths: (
+  xl: 1600px,
+);
+
+$grid-columns: 12;
+$grid-row-columns: 6;
+$grid-gutter-width: 40px;
+$container-padding-x: unquote('min(12.5vw, 200px)');
+
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+$transition-collapse-width: width 0.35s ease;
+
+// include-media
+$breakpoints: map-remove($grid-breakpoints, xs);
+
+$media-expressions: (
+  'touch': '(pointer: coarse)',
+  'mouse': '(pointer: fine)',
+);
