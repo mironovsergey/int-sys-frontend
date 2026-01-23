@@ -1,5 +1,6 @@
 import 'lazysizes';
 import Modal from 'bootstrap/js/dist/modal';
+import lightbox from './components/lightbox';
 import Gallery from './components/gallery';
 import Form from './components/form';
 import slider from './components/slider';
@@ -7,6 +8,7 @@ import xmark from '../template/icons/xmark.svg';
 
 export default class App {
   constructor() {
+    this.initLightbox();
     this.initHeader();
     this.initVisibilityObserver();
     this.initOffcanvas();
@@ -14,6 +16,10 @@ export default class App {
     this.initForms();
     this.initServicesSlider();
     this.initPartnerCard();
+  }
+
+  initLightbox() {
+    lightbox();
   }
 
   initHeader() {

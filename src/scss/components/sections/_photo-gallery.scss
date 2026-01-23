@@ -1,0 +1,19 @@
+.photo-gallery {
+  column-count: 2;
+  column-gap: rem(40px);
+
+  &__item {
+    break-inside: avoid;
+    margin-bottom: rem(40px);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  @include media('>=xl') {
+    column-count: 4;
+  }
+}
