@@ -3,6 +3,8 @@
 }
 
 .vacancy-card {
+  height: 100%;
+
   &__outer {
     background-color: var(--neutral-200);
     border-radius: rem(16px);
@@ -10,6 +12,7 @@
     display: flex;
     flex-direction: column;
     row-gap: rem(24px);
+    height: 100%;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -25,7 +28,8 @@
       width: 100%;
       height: 100%;
       transform: translateY(101%);
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1),
+      transition:
+        transform 0.5s cubic-bezier(0.4, 0, 0, 1),
         border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
     }
 
