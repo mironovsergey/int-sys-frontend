@@ -314,6 +314,19 @@ export default class Gallery {
   bindEvents() {
     window.addEventListener('resize', () => this.handleResize());
     this.canvas.addEventListener('click', (e) => this.handleCanvasClick(e));
+    this.canvas.addEventListener('mousemove', (e) => this.handleCanvasMouseMove(e));
+  }
+
+  handleCanvasMouseMove(event) {
+    const rect = this.canvas.getBoundingClientRect();
+    const mouseX = (event.clientX - rect.left) * this.dpr;
+    const mouseY = (event.clientY - rect.top) * this.dpr;
+
+    const isOverImage = this.diagonals.some((diagonal) =>
+      diagonal.items.some((item) => this.isClickOnItem(mouseX, mouseY, item, diagonal)),
+    );
+
+    this.canvas.style.cursor = isOverImage ? 'pointer' : 'default';
   }
 
   handleResize() {

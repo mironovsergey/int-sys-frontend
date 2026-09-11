@@ -10,6 +10,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    isolation: isolate;
   }
 
   &__inner {
@@ -22,12 +23,32 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+  }
+
+  &__video {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow-clip-margin: unset;
+    }
   }
 
   &__front {
     min-height: 100svh;
     padding-top: var(--header-height);
+    pointer-events: none;
   }
 
   &__gallery {
